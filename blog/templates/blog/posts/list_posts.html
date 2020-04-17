@@ -1,0 +1,41 @@
+<h1 class="my-4">{{title}}
+    <small>{{sub_title}}</small>
+</h1>
+
+<!-- Blog Post -->
+{% if not posts %}
+
+<p>Não há publicações!</p>
+{% endif %}
+
+{% for post in posts %}
+
+<div class="card mb-4">
+    <img class="card-img-top" src="{{post.get_image}}" alt="">
+    <div class="card-body">
+        <h2 class="card-title">{{post.title}}</h2>
+        <p class="card-text">{{post.text | slice:"0:255"}}...</p>
+        <a href="{% url 'index' pk=post.id %}" class="btn btn-primary">Leia mais &rarr;</a>
+    </div>
+    <div class="card-footer text-muted">
+        {{post.published_date}} por
+        <a href="#">{{post.author}}</a>
+    </div>
+</div>
+{% endfor %}
+
+<!-- Pagination -->
+<ul class="pagination justify-content-center mb-4">
+    {% if posts.has_previous %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ posts.previous_page_number }}">&larr; Back</a>
+    </li>
+    {% endif %}
+    {% if posts.has_next %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ posts.paginator.num_pages }}">Next &rarr;</a>
+    </li>
+
+    {% endif %}
+
+</ul>

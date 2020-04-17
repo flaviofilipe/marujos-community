@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block content%}
+
+<div class="card mb-4">
+    <img class="card-img-top" src="{{posts.get_image}}" alt="">
+    <div class="card-body">
+        <h2 class="card-title">{{posts.title}}</h2>
+        <p class="card-text">{{posts.text}}</p>
+    </div>
+    <div class="card-footer text-muted">
+        {{posts.published_date}} por
+        <a href="#">{{posts.author}}</a>
+    </div>
+</div>
+
+{% endblock %}

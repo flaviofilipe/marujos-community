@@ -11,7 +11,7 @@ Este projeto foi desenvolvido utilizando o Django v3.0.5 e o PostgreSQL v12.2.
 ## Instalação
 
 - Crie o arquivo .env baseado no arquivo .env.example
-- Insira as credenciais do bancod e dados no arquivo .env
+- Insira as credenciais do banco de dados no arquivo .env
 
 - [Virtualenv](https://virtualenv.pypa.io/en/latest/)
     ```
@@ -41,6 +41,6 @@ Este projeto foi desenvolvido utilizando o Django v3.0.5 e o PostgreSQL v12.2.
     ```
 - Execute
     ```
-    python manage.pu runserver
+    python manage.py runserver
     ```
   

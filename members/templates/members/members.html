@@ -1,0 +1,74 @@
+{% extends "members/base.html" %}
+{% load static %}
+
+{% block content%}
+	
+	{% if members %}
+		{% for member in members%}
+			<!-- Member Avatar -->
+			<div class="row text-center">
+
+				<div class="col-5">
+
+					<hr class="visible">
+
+				</div>
+
+				<div class="col-12 col-md-2">
+
+					<img id="avatar" class="rounded-circle" src="{{MEDIA_URL}}{{member.avatar}}" height="150px" />
+
+				</div>
+
+				<div class="col-5">
+
+					<hr class="visible">
+
+				</div>
+
+			</div>
+
+			<!-- Member Name -->
+			<div class="row text-center">
+
+				<div class="col-12">
+					<p class="member_name">{{member.name}}</p>
+				</div>
+
+			</div>
+
+			<!-- Member Job -->
+			<div class="row text-center">
+
+				<div class="col-12">
+					<p class="job">{{member.job}}</p>
+				</div>
+
+			</div>
+
+			<br>
+			
+			<!-- About the member -->
+			<div class="row text-center">
+				
+				<div class="col-12">
+					
+					<p class="resume">{{member.resume}}</p>
+
+				</div>
+
+			</div>
+			<br>
+
+		{% endfor %}
+	{% else %}
+		<div class="row text-center">
+			<div class="col-12">
+				<br>
+				<h4>Não há membros...</h4>
+				<br>
+			</div>
+			
+		</div>
+	{% endif %}
+{% endblock %}

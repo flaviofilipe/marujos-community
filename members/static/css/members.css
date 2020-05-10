@@ -1,0 +1,46 @@
+@media only screen and (min-width: 1200px){
+	/* Visible only >1200px width screens */
+	.visible {
+		display: block !important;
+	}
+}
+
+@media only screen and (max-width: 767px){
+
+	.port_title{
+		font-size: 22px;
+	}
+}
+
+
+#avatar {
+	border: 2px solid #949494;
+	margin-top: 1em;
+}
+
+.visible {
+	display: none;
+	margin-top: 90px;
+	margin-left: 0.9em;
+	margin-right: 0.8em;
+	background-color: #949494; 
+
+}
+
+/*Name after avatar*/
+.member_name {
+
+	font-size: 18px;
+	font-weight: 600;
+}
+
+/*Job after my_name*/
+.job {
+	font-size: 13px;
+	font-weight: 200;
+	margin-top: -15px !important;
+}
+
+.resume {
+	font-size: 17px !important;
+}

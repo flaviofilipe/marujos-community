@@ -32,7 +32,8 @@ Este projeto foi desenvolvido utilizando o Django v3.0.5 e o PostgreSQL v12.2.
     
 - Migrations
     ```
-    python manage.py migrate
+    python manage.py makemigrations
+    python manage.py migrate --run-syncdb
     ```
     
 - Superuser
